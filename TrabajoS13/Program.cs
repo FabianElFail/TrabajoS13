@@ -1,14 +1,14 @@
 ﻿
 using TrabajoS13;
 
-Desayuno dd = new Desayuno();
-dd.Nombre = "Continental";
-dd.Precio = 20.5;
-dd.Dias = "lun,mar,mie";
+Desayuno d = new Desayuno();
+d.Nombre = "Continental";
+d.Precio = 20.5;
+d.Dias = "lun,mar,mie";
 
-Console.WriteLine(dd);
+Console.WriteLine(d);
 
-String[] lista = dd.ListaDias();
+String[] lista = d.ListaDias();
 foreach (string str in lista)
 {
     Console.WriteLine(str);

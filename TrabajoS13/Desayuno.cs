@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace TrabajoS13
 {
-    internal class Desayuno
+    public class Desayuno
     {
+        public string Nombre { get; set; }
+        public double Precio { get; set; }
+        public string Dias { get; set; }
+
+        public override string? ToString()
+        {
+            return $"Hola {Nombre} S/.{Precio}, servido los {Dias}";
+        }
+
+
+        public string[] ListaDias()
+        {
+            return Dias.Split(',');
+        }
+
     }
 }
