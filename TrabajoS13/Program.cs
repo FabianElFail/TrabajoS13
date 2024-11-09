@@ -1,5 +1,4 @@
-﻿
-using TrabajoS13;
+﻿using TrabajoS13;
 
 Desayuno d = new Desayuno();
 d.Nombre = "Continental";
@@ -17,7 +16,7 @@ foreach (string str in lista)
 
 
 
-int menu_number, desayuno_length = 0, desayuno2_length = 0;
+int menu_number, desayuno_length = 0, desayuno2_length = 0, elim=0;
 string[] desayuno = new string[desayuno_length];//creacion de array
 
 do //Bucle del menú
@@ -35,7 +34,6 @@ do //Bucle del menú
         string valor = Console.ReadLine();
         if (int.TryParse(valor, out menu_number)) ;
     } while (false);
-
     switch (menu_number) //Ingresar a las opciones del menú
     {
         case 1: //Menú de array numérico
@@ -72,19 +70,21 @@ do //Bucle del menú
             Console.WriteLine("¿Qué elemento desea eliminar?");
             Console.Write("Inserte el nombre del desayuno: ");
             string nombre_desayuno = Console.ReadLine();
-            int elim = Array.IndexOf(desayuno, nombre_desayuno);
+            elim = Array.IndexOf(desayuno, nombre_desayuno);
             string[] desayuno2 = new string[desayuno_length];//creacion de array 
-            desayuno2 = desayuno;
-            desayuno2_length = desayuno_length - 1;
-            Array.Resize(ref desayuno, desayuno2_length);
-            for (int i = 0; i < desayuno2.Length; i++)
+            desayuno2 = desayuno; desayuno2_length = desayuno_length - 1;
+            Array.Resize(ref desayuno, desayuno2_length);       
+            for (int i = 0, i2=0; i2 < desayuno2.Length; i2++)
             {
-                if (i != elim)
-                    desayuno[i] = desayuno2[i];
-                else;
-                  
+                if (i2 != elim)
+                {
+                    desayuno[i] = desayuno2[i2];
+                    i++;
+                }
+                else
+                { }
             }
-            Console.WriteLine($"Se eliminó la posición {elim}, es decir el {elim+1} elemento");
+            Console.WriteLine($"Se eliminó la posición {elim}, es decir el {elim+1}° elemento");          
             Console.WriteLine("Presione cualquier tecla para continuar");
             Console.ReadKey();
             break;
