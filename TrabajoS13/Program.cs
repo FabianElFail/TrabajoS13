@@ -9,7 +9,7 @@ using TrabajoS13;
 int menu_number, desayuno_length = 0, desayuno2_length = 0, elim=0;
 string[] desayuno = new string[desayuno_length];//creacion de array
 
-do //Bucle del menú
+do 
 {
     do
     {
@@ -24,9 +24,9 @@ do //Bucle del menú
         string valor = Console.ReadLine();
         if (int.TryParse(valor, out menu_number)) ;
     } while (false);
-    switch (menu_number) //Ingresar a las opciones del menú
+    switch (menu_number) 
     {
-        case 1: //Menú de array numérico
+        case 1: 
             Console.Clear();
             Console.WriteLine("Lista de desayunos creada");
             Console.WriteLine("Inserte la cantidad de desayunos que desea para su lista:");
@@ -50,7 +50,7 @@ do //Bucle del menú
             Console.WriteLine("Aquí se muestran los valores ingresados con su ubicación:");
             for (int i = 0; i < desayuno.Length; i++)
             {
-                Console.WriteLine($"Ubicación: {i} --> Valor: {desayuno[i]}"); //Mostrar valores del array
+                Console.WriteLine($"Ubicación: {i} --> Valor: {desayuno[i]}"); 
             }
             Console.WriteLine("Presione cualquier tecla para continuar");
             Console.ReadKey();
@@ -61,7 +61,7 @@ do //Bucle del menú
             Console.Write("Inserte el nombre del desayuno: ");
             string nombre_desayuno = Console.ReadLine();
             elim = Array.IndexOf(desayuno, nombre_desayuno);
-            string[] desayuno2 = new string[desayuno_length];//creacion de array 
+            string[] desayuno2 = new string[desayuno_length];
             desayuno2 = desayuno; desayuno2_length = desayuno_length - 1;
             Array.Resize(ref desayuno, desayuno2_length);       
             for (int i = 0, i2=0; i2 < desayuno2.Length; i2++)
@@ -78,7 +78,7 @@ do //Bucle del menú
             Console.WriteLine("Presione cualquier tecla para continuar");
             Console.ReadKey();
             break;
-        case 5: //Salir del programa
+        case 5: 
             Console.Clear();
             Console.WriteLine("Terminó el programa");
             Console.WriteLine("");
