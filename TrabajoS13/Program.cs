@@ -7,7 +7,7 @@ using TrabajoS13;
 
 
 int menu_number, desayuno_length = 0, desayuno2_length = 0, elim=0;
-string[] desayuno = new string[desayuno_length];//creacion de array
+string[] desayuno = new string[desayuno_length];
 
 do 
 {
