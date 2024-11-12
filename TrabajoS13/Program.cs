@@ -1,19 +1,9 @@
-﻿using TrabajoS13;
 
-Desayuno d = new Desayuno();
-d.Nombre = "Continental";
-d.Precio = 20.5;
-d.Dias = "lun,mar,mie";
-
-Console.WriteLine(d);
-
-String[] lista = d.ListaDias();
-foreach (string str in lista)
-{
-    Console.WriteLine(str);
-}
-
-
+//Chumbiauca Quispe , Maria Fernando
+//Alarcon Pinao , Andre Adolfo
+//Garcia Osorio , James Hgun Jair
+//Casas Olivos , Fabian Alexandro
+using TrabajoS13;
 
 
 int menu_number, desayuno_length = 0, desayuno2_length = 0, elim=0;
@@ -104,3 +94,4 @@ do //Bucle del menú
                 break;
     }
 } while (menu_number != 5) ;
+
