@@ -1,18 +1,18 @@
-﻿using System.Drawing;
+
+using System.Drawing;
 using TrabajoS13;
-Desayuno d = new Desayuno();
-d.Nombre = "Continental";
-d.Precio = 20.5;
-d.Dias = "lun,mar,mie";
-Console.WriteLine(d);
-String[] lista = d.ListaDias();
-foreach (string str in lista)
-{
-    Console.WriteLine(str);
-}
+
+//Chumbiauca Quispe , Maria Fernando
+//Alarcon Pinao , Andre Adolfo
+//Garcia Osorio , James Hgun Jair
+//Casas Olivos , Fabian Alexandro
+
+
+
 int menu_number, desayuno_length = 0, desayuno2_length = 0, elim=0;
-string[] desayuno = new string[desayuno_length];//creacion de array
-do //Bucle del menú
+string[] desayuno = new string[desayuno_length];
+
+do 
 {
     do
     {
@@ -27,9 +27,9 @@ do //Bucle del menú
         string valor = Console.ReadLine();
         if (int.TryParse(valor, out menu_number)) ;
     } while (false);
-    switch (menu_number) //Ingresar a las opciones del menú
+    switch (menu_number) 
     {
-        case 1: //Menú de array numérico
+        case 1: 
             Console.Clear();
             Console.WriteLine("Lista de desayunos creada");
             Console.WriteLine("Inserte la cantidad de desayunos que desea para su lista:");
@@ -53,12 +53,13 @@ do //Bucle del menú
             Console.WriteLine("Aquí se muestran los valores ingresados con su ubicación:");
             for (int i = 0; i < desayuno.Length; i++)
             {
-                Console.WriteLine($"Ubicación: {i} --> Valor: {desayuno[i]}"); //Mostrar valores del array
+                Console.WriteLine($"Ubicación: {i} --> Valor: {desayuno[i]}"); 
             }
             Console.WriteLine("Presione cualquier tecla para continuar");
             Console.ReadKey();
             break;
         case 4:
+
                 Console.Clear();
                 Console.WriteLine("¿Qué elemento desea eliminar?");
                 Console.Write("Inserte el nombre del desayuno: ");
@@ -92,7 +93,7 @@ do //Bucle del menú
                     Console.ReadKey();
                 }
             break;
-        case 5: //Salir del programa
+        case 5: 
             Console.Clear();
             Console.WriteLine("Terminó el programa");
             Console.WriteLine("");
@@ -108,3 +109,4 @@ do //Bucle del menú
                 break;
     }
 } while (menu_number != 5) ;
+
